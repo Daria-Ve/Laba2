@@ -1,0 +1,114 @@
+body { /* Основні стилі для всього тіла сторінки */
+    font-family: 'Gabriola', serif;
+     background-image: url('https://i.pinimg.com/736x/cf/46/2a/cf462a9ea9c3a1c157f6bd02a32137ca.jpg');
+    background-color: #998b64;
+    margin: 0;
+    padding: 0;
+}
+
+.container { /* Контейнер для вмісту */
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Gabriola', serif;
+}
+
+h1 { /* Заголовок сторінки */
+    font-family: 'French Script MT', serif; 
+    text-align: center;
+    color: #333;
+    font-weight: 700;
+    font-size: 55px;
+}
+
+form { /* Стилі для форми */
+    font-family: 'Gabriola', serif; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label { 
+/* Підписи до полів */
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+}
+
+select, button { 
+    /* Стилі для випадаючих списків та кнопок */
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    font-family: 'Old Standard TT', serif;
+}
+
+button {/* Стилі для кнопки */
+    cursor: pointer;
+    background-color: #5b855d;
+    color: rgb(255, 255, 255);
+    border: none;
+    transition: background-color 0.3s;
+    width: auto;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #5b855d;
+}
+
+#results {
+    font-size: 20px;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #acb087;
+    border-radius: 8px;
+    min-height: 50px;
+}
+
+ul { /* Стилі списку результатів */
+    list-style-type: none;
+    padding: 0;
+}
+
+li { /* Окремий елемент списку */
+    padding: 12px;
+    background-color: #eeeed1;
+    margin: 8px 0;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.select-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.select-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.country-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.country-checkboxes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
