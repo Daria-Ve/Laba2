@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рекомендації книг</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Recommendations</h1>
+        <form>
+            <div class="select-container">
+                <div class="select-group select-genre">
+                    <label for="genre">Жанр:</label>
+                    <select id="genre">
+                        <option value="">-- Оберіть жанр --</option>
+                        <option value="Dystopian">Антиутопія</option>
+                        <option value="Fantasy">Фентезі</option>
+                        <option value="Romantic Fantasy">Романтична фентезі</option>
+                        <option value="Biography">Біографія</option>
+                        <option value="Romance">Роман</option>
+                        <option value="Classic">Класика</option>
+                        <option value="Novella">Повість</option>
+                        <option value="Romcom">Ромком</option>
+                        <option value="Speculative fiction">Фантастика</option>
+                        <option value="Adventure">Пригоди</option>
+                        <option value="Detective fiction">Детектив</option>
+                        <option value="Science fiction">Наукова Фантастика</option>
+                        <option value="Historical fiction">Історичний роман</option>
+                        <option value="Religious literature">Релігійна література</option>
+                    </select>
+                </div>
+                <div class="select-group select-period">
+                    <label for="period">Період:</label>
+                    <select id="period">
+                        <option value="">-- Оберіть період --</option>
+                        <option value="Антична література">До 500</option>
+                        <option value="Середньовічна література">500-1299</option>
+                        <option value="Відродження XIV – XVI ст">1300-1599</option>
+                        <option value="Література Нового часу">1600-1699</option>
+                        <option value="Класична література XIX ст">1800-1899</option>
+                        <option value="Модернізм 1900-1945">1900-1944</option>
+                        <option value="Друга половина XX ст">1945-1999</option>
+                        <option value="Сучасна література">2000-2030</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="country-container">
+                <label>Країна:</label>
+                <div class="country-checkboxes">
+                    <label><input type="checkbox" name="country" value="Ukraine"> Україна</label>
+                    <label><input type="checkbox" name="country" value="USA"> США</label>
+                    <label><input type="checkbox" name="country" value="France"> Франція</label>
+                    <label><input type="checkbox" name="country" value="United Kingdom"> Великобританія</label>
+                </div>
+            </div>
+
+            <button type="button" onclick="getRecommendations()">Рекомендувати</button>
+        </form>
+
+        <div id="results"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
